@@ -1,8 +1,8 @@
-package au.bystritskaia.complex.models.complex;
+package au.bystritskaia.models;
 /**
  * Комплексное число
  */
-public class Complex {
+public class Complex extends Number{
     /**
      * Реальная часть
      */
@@ -61,6 +61,6 @@ public class Complex {
      */
     @Override
     public String toString() {
-        return real + image +"i";
+        return "(" + real + " + " + image +"i)";
     }
 }

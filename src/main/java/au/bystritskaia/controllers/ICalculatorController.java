@@ -1,4 +1,6 @@
-package au.bystritskaia.complex.controllers;
+package au.bystritskaia.controllers;
+
+import au.bystritskaia.views.enums.Command;
 
 /**
  * Контроллер калькуляторов
@@ -7,31 +9,11 @@ package au.bystritskaia.complex.controllers;
 public interface ICalculatorController<T> extends Runnable{
 
     /**
-     * Выводит сумму
-     * @param num1 Число 1
-     * @param num2 Число 2
+     * Выводит результат после команды
+     * @param command Команда
+     * @param num1 1 число
+     * @param num2 2 число
      */
-    void printSum(T num1, T num2);
-
-    /**
-     * Выводит разницу
-     * @param num1 Число 1
-     * @param num2 Число 2
-     */
-    void printSub(T num1, T num2);
-
-    /**
-     * Выводит произведение
-     * @param num1 Число 1
-     * @param num2 Число 2
-     */
-    void printMul(T num1, T num2);
-
-    /**
-     * Выводит частное
-     * @param num1 Число 1
-     * @param num2 Число 2
-     */
-    void printDiv(T num1, T num2);
+    T printResult(Command command, T num1, T num2);
 
 }

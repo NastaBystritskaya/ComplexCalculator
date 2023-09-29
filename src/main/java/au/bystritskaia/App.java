@@ -1,5 +1,9 @@
 package au.bystritskaia;
 
+import au.bystritskaia.controllers.ICalculatorController;
+import au.bystritskaia.controllers.complex.ComplexCalculatorController;
+import au.bystritskaia.models.Complex;
+
 /**
  * Hello world!
  *
@@ -8,6 +12,7 @@ public class App
 {
     public static void main( String[] args )
     {
-        System.out.println( "Hello World!" );
+        ICalculatorController<Complex> controller = new ComplexCalculatorController();
+        controller.run();
     }
 }

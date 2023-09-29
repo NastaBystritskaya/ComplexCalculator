@@ -2,12 +2,16 @@ package au.bystritskaia.rules.impl;
 
 import au.bystritskaia.rules.IRule;
 import au.bystritskaia.views.ICalculatorView;
+import au.bystritskaia.views.complex.ComplexViewEng;
 import au.bystritskaia.views.complex.ComplexViewRUS;
 import au.bystritskaia.views.enums.Locale;
 
 import java.util.function.Predicate;
 
-public class CalculatorViewRusRule implements IRule<ICalculatorView, Locale> {
+/**
+ * Правило английского вью.
+ */
+public class CalculatorViewEngRule implements IRule<ICalculatorView, Locale> {
     /**
      * Условие правила
      *
@@ -16,7 +20,7 @@ public class CalculatorViewRusRule implements IRule<ICalculatorView, Locale> {
      */
     @Override
     public boolean match(Predicate<Locale> predicate) {
-        return predicate.test(Locale.RUS);
+        return predicate.test(Locale.ENG);
     }
 
     /**
@@ -26,6 +30,6 @@ public class CalculatorViewRusRule implements IRule<ICalculatorView, Locale> {
      */
     @Override
     public ICalculatorView get() {
-        return new ComplexViewRUS();
+        return new ComplexViewEng();
     }
 }

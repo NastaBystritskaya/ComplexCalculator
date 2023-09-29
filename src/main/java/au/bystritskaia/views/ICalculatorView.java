@@ -1,24 +1,30 @@
-package au.bystritskaia.complex.views;
+package au.bystritskaia.views;
 
-import au.bystritskaia.complex.views.enums.Command;
+import au.bystritskaia.models.Number;
+import au.bystritskaia.views.enums.Command;
+
+import java.util.Scanner;
 
 /**
  * Вью калькулятора
  */
 public interface ICalculatorView {
+
     /**
      * Получает результат операции
+     * @param command Команда
+     * @param result Результат
      */
-    void printResult(Command command, double num1, double num2);
+    void printResult(Command command, Number num1, Number num2, String result);
 
     /**
-     * Получает первое число
-     * @return 
+     * Получает следующее число
      */
-    double getFirstNumCommand();
+    void getNextNumCommand();
 
-    double getSecondNumCommand();
-
-    String getLangCommand();
+    /**
+     * Сообщение о вводе команды
+     */
+    void getCommand();
 
 }

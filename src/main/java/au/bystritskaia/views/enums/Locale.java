@@ -1,4 +1,4 @@
-package au.bystritskaia.complex.views.enums;
+package au.bystritskaia.views.enums;
 
 /**
  * Перечисление поддерживаемых язвыков.

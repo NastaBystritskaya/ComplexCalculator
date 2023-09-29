@@ -1,4 +1,4 @@
-package au.bystritskaia.complex.views.enums;
+package au.bystritskaia.views.enums;
 
 /**
  * Перечисление поддерживаемых комманд
@@ -8,21 +8,50 @@ public enum Command {
     /**
      * Сумма
      */
-    PLUS,
+    PLUS("+"),
 
     /**
      * Минус
      */
-    MINUS,
+    MINUS("-"),
 
     /**
      * Деление
      */
-    DEV,
+    DEV("/"),
 
     /**
      * Умножение
      */
-    MUL
+    MUL("*"),
 
+    /**
+     * Равно
+     */
+    EQUALS("="),
+    /**
+     * Выход
+     */
+    STOP(".")
+    ;
+    /**
+     * Команда
+     */
+    private String command;
+
+    /**
+     * Получает символ команды
+     * @return Символ команды
+     */
+    public String getCommand() {
+        return command;
+    }
+
+    /**
+     * Конструктор
+     * @param command Команда
+     */
+    Command(String command) {
+        this.command = command;
+    }
 }

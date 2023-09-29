@@ -1,2 +1,4 @@
-package au.bystritskaia.models;public class Number {
+package au.bystritskaia.models;
+
+public class Number {
 }

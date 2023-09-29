@@ -1,4 +1,4 @@
-package au.bystritskaia.complex.services;
+package au.bystritskaia.services;
 
 /**
  * Интерфейс калькулятора
@@ -11,7 +11,7 @@ public interface ICalculatorService<T> {
      * @param num2 2 число
      * @return Результат
      */
-    String add(T num1, T num2);
+    T add(T num1, T num2);
 
     /**
      * Разница.
@@ -19,7 +19,7 @@ public interface ICalculatorService<T> {
      * @param num2 2 число
      * @return Результат
      */
-    String sub(T num1, T num2);
+    T sub(T num1, T num2);
 
     /**
      * Умница.
@@ -27,14 +27,14 @@ public interface ICalculatorService<T> {
      * @param num2 2 число
      * @return Результат
      */
-    String mul(T num1, T num2);
+    T mul(T num1, T num2);
     /**
      * Деление.
      * @param num1 1 число
      * @param num2 2 число
      * @return Результат
      */
-    String div(T num1, T num2);
+    T div(T num1, T num2);
 
 
 }

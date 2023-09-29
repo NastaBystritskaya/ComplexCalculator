@@ -1,7 +1,7 @@
-package au.bystritskaia.complex.services.complex;
+package au.bystritskaia.services.complex;
 
-import au.bystritskaia.complex.models.complex.Complex;
-import au.bystritskaia.complex.services.ICalculatorService;
+import au.bystritskaia.models.Complex;
+import au.bystritskaia.services.ICalculatorService;
 
 public class ComplexCalculatorService implements ICalculatorService<Complex> {
 
@@ -13,10 +13,10 @@ public class ComplexCalculatorService implements ICalculatorService<Complex> {
      * @param num2 2 число
      * @return Результат
      */
-    public String add(Complex num1, Complex num2) {
+    public Complex add(Complex num1, Complex num2) {
         double real = num1.getReal() + num2.getReal();
         double image = num1.getImage() + num2.getImage();
-        return new Complex(real, image).toString();
+        return new Complex(real, image);
     }
 
     /**
@@ -26,8 +26,10 @@ public class ComplexCalculatorService implements ICalculatorService<Complex> {
      * @param num2 2 число
      * @return Результат
      */
-    public String sub(Complex num1, Complex num2) {
-        return null;
+    public Complex sub(Complex num1, Complex num2) {
+        double real = num1.getReal() - num2.getReal();
+        double image = num1.getImage() - num2.getImage();
+        return new Complex(real, image);
     }
 
     /**
@@ -37,8 +39,10 @@ public class ComplexCalculatorService implements ICalculatorService<Complex> {
      * @param num2 2 число
      * @return Результат
      */
-    public String mul(Complex num1, Complex num2) {
-        return null;
+    public Complex mul(Complex num1, Complex num2) {
+        double real = num1.getReal() * num2.getReal();
+        double image = num1.getImage() * num2.getImage();
+        return new Complex(real, image);
     }
 
     /**
@@ -48,7 +52,9 @@ public class ComplexCalculatorService implements ICalculatorService<Complex> {
      * @param num2 2 число
      * @return Результат
      */
-    public String div(Complex num1, Complex num2) {
-        return null;
+    public Complex div(Complex num1, Complex num2) {
+        double real = num1.getReal() / num2.getReal();
+        double image = num1.getImage() / num2.getImage();
+        return new Complex(real, image);
     }
 }
